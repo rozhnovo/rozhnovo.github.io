@@ -6,7 +6,7 @@ var ids=require("short-id");
 var source_name="index";
 var dir="tropa_2019";
 var num_files=16;
-for( i =0; i<num_files;i++){
+for( i =1; i<=num_files;i++){
     var fn=ids.generate();
     console.log(fn);
     src_fn=path.join(dir,source_name+".html");
