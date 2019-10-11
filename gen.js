@@ -10,7 +10,7 @@ for( i =0; i<num_files;i++){
     var fn=ids.generate();
     console.log(fn);
     src_fn=path.join(dir,source_name+".html");
-    dst_fn=path.join(dir,""+i+"_"+fn+".html");
+    dst_fn=path.join(dir,"f"+fn+".html");
     console.log(src_fn,">",dst_fn);
     fs.copyFile(src_fn,dst_fn,(err)=>{
         if(err){
