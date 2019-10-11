@@ -27,7 +27,7 @@ var result=[];
 for( i =0; i<num_files;i++){
     var id=ids.generate();
     var fileDir=path.join("f"+id);
-    fs.mkdirSync(fileDir);
+    fs.mkdirSync(path.join(dir,fileDir));
 
     src_fn=path.join(dir,source_name+".html");
     var fn=path.join(dir,fileDir,"index.html");
