@@ -26,16 +26,16 @@ var result=[];
 
 for( i =0; i<num_files;i++){
     var id=ids.generate();
-    var fileDir=path.join(dir,"f"+id);
+    var fileDir=path.join("f"+id);
     fs.mkdirSync(fileDir);
 
     src_fn=path.join(dir,source_name+".html");
-    var fn=path.join(fileDir,"index.html");
+    var fn=path.join(dir,fileDir,"index.html");
     dst_fn=fn;
     console.log(src_fn,">",dst_fn);
     fs.copyFileSync(src_fn,dst_fn);
-    fs.copyFileSync(path.join(dir,textHtml),path.join(fileDir,textHtml));
-    fs.copyFileSync(path.join(dir,image),path.join(fileDir,image));
+    fs.copyFileSync(path.join(dir,textHtml),path.join(dir,fileDir,textHtml));
+    fs.copyFileSync(path.join(dir,image),path.join(dir,fileDir,image));
     result.push({id:i+1,link:site_prefix+fileDir.replace("\\","/")});
 
 }
