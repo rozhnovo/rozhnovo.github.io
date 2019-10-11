@@ -2,7 +2,7 @@ var fs=require("fs");
 var uuidv4 = require('uuid/v4');
 var path=require("path");
 
-var source_name="_";
+var source_name="template";
 var dir="tropa_2019";
 var num_files=16;
 for( i =0; i<num_files;i++){
